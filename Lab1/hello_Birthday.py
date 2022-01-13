@@ -11,9 +11,9 @@
 
 import datetime
 
-x = datetime.datetime.now()
+x = datetime.datetime.now() # calculates current date and time
 
-print('Current month is: ' + x.strftime("%B"))
+print('Current month is: ' + x.strftime("%B")) # this output is only month + note to say what out pot is.
 
 name = input('What is your name? ')#user input prompt
 birthday_month = input('What month were you born in? ') # another input to use data in out program.
