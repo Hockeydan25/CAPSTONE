@@ -1,8 +1,7 @@
 # dan Smestad video instructions lab2 
-from ast import pattern
+
 from datetime import datetime, date, time
-import imp
-from turtle import position
+
 
 today = date.today()# prints current date.
 print(today)
@@ -53,8 +52,9 @@ print(state) # prints state.
 # more unpacking - need enough variaels to unpack it.
 animals = ('lion', 'puma', 'tiger')
 
-lion, puma ,tiger =animals
+lion, puma ,tiger = animals
 
+print(animals)
 print(tiger)
 
 #returning more than one value or a function.
@@ -62,10 +62,10 @@ print(tiger)
 def get_distance(): # creating a new function, a non-system function.
     miles = 10000
     km =miles * 1.6
-    return miles, km #returns distnce in kilo meters.
+    return miles, km  #returns distnce in kilo meters.
 
 distances = get_distance()
-print(distances[0])  #use index to get just the miles.
+print(distances)  #use index to get just the miles.
 # output showing parh like this (10000, 16000.0).
 
 # rewritten here with an unpacking method

@@ -3,7 +3,7 @@
 #List Comprehension syntax
 
 #The classes a student is register for.
-from tkinter import N
+
 
 
 classes_registered = ['ITEC 2905','ITEC 2950','INFS 1000','PHED 1132',]
