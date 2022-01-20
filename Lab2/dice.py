@@ -2,7 +2,7 @@
 import random
 
 class Dice:
-    def __init__(self, sides=6): #example with default set to 6
+    def __init__(self, sides=6): #example with default set to 6. common dice set.
         self.sides = sides
 
     def roll(self):
@@ -13,4 +13,4 @@ class Dice:
 #     print(dice.roll())       
 
 dice2 = Dice()
-print(dice2.roll()) # exmaple with default value used here 
+print(dice2.roll()) # exmaple with default value used here. roll() is an internal method call. 

@@ -49,7 +49,7 @@ city, state = first_city_state #unpack to just the city .
 #print(city).
 print(state) # prints state.
 
-# more unpacking - need enough variaels to unpack it.
+# more unpacking - need enough variaels to unpack it. aray
 animals = ('lion', 'puma', 'tiger')
 
 lion, puma ,tiger = animals

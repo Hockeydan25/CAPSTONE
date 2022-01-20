@@ -11,3 +11,4 @@ try:
     print(f'The Magic 8 Ball says....:  {answer}')
 except:
     print('Sorry, magic 8  ball is out right now, please try again later!')
+    #program runs well with requests installed.

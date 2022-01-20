@@ -8,7 +8,6 @@ Add some comments in your code to compare the dataclass version to the "traditio
 from dataclasses import dataclass
 
 @dataclass # decorator
-
 class Student: #initilized object, name instant variable.
     name: str
     school_id: str
