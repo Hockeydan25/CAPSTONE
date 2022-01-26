@@ -11,7 +11,7 @@ from dataclasses import dataclass
 class Student: #initilized object, name instant variable.
     name: str
     school_id: str
-    gpa: float
+    gpa: dict
 
     def __str__(self):            #function to an override to cleanup how the out put looks.
         return f'Student name: {self.name}, ID: {self.school_id}, GPA: {self.gpa}'
