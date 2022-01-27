@@ -4,9 +4,9 @@ The first word is lowercase, the rest of the words have their initial letter cap
 and all of the words are joined together. For example, with the input "fOnt proCESSOR and ParsER", 
  your program will output "fontProcessorAndParser". """
 
-#made several more changes here for lab3 Branches lesson.
+"""made several more changes here for lab3 Branches lesson."""
 
-
+"""Camelcase converter program! have fun, it's useful!"""
 
 def camelcase(sentence):
 	""" Convert sentence to camelCase, for example, "Display all books" 
