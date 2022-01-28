@@ -46,8 +46,8 @@ class Question:
         self.answers = answers
 
 
-    def publish(self, correct_answer ):        
-        self.correct_answer 
+    def triva_questions(self,  ):        
+        self.
 
     def __str__(self):      #data = a or b = truthy a falsy b is set. # does the same as above less code more consice
         
@@ -60,7 +60,8 @@ def main ():
     get_quiz()
     ('Harry Potter books 1')  #aurthors book titles.
 
-
+    # print "dict[]: ", dict[]
+    # print "dict[]: ", dict[]
     
     
 main()    
