@@ -8,7 +8,7 @@ and all of the words are joined together. For example, with the input "fOnt proC
 
 """Camelcase converter program! have fun, it's useful!"""
 
-def camelcase(sentence):
+def camelCase(sentence):
 	""" Convert sentence to camelCase, for example, "Display all books" 
 	is converted to "displayAllBooks" """
 	title_case = sentence.title() # Uppercase first letter of each word
@@ -32,7 +32,7 @@ def main():
     banner()
     instructions()
     sentence = input('Enter your sentence: ')
-    output = camelcase(sentence)
+    output = camelCase(sentence)
     print(output)
 if __name__ == '__main__':
     main()
