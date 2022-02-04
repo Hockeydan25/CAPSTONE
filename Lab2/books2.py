@@ -12,7 +12,7 @@ class Aurthor:
     
     def __init__(self, name):#initilized object, name instant variable.
         self.name = name     #setting the object parameters
-        self.books = set()   #empty set
+        self.books = str   #empty set
 
     def publish(self, title):        
         self.books.add(title) #appending to the books list.

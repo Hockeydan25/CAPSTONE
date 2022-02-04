@@ -1,5 +1,6 @@
 """
 Dan Smestad ITEC 2905-80 Capstone 2/2/2021.
+Python Lab4. 
 Python testing example for testing your code. 
 Start your test functions with the word test!
 don't forget assert mothods. Team testing is good!
@@ -22,4 +23,9 @@ class TestCamelCase(TestCase):  #class declartion
         self.assertEqual('👽🌎🌺🐑🌳', python_camelCase.camelCase('👽🌎🌺🐑🌳'))  
         #copy pasted this in emoji, there isnt another way to place them?.
 
+    def test_camelCase_special_characters(self):
+        self.assertEqual('@_!#$%^&*()<>?/\|}{~:;[]', python_camelCase.camelCase('@_!#$%^&*()<>?/\|}{~:;[]'))
+        # testing sentence build that matches.    
 
+    ## TODO Optional: implement a filter to remove special characters from the 
+    # input string. Write a test for this filter. 

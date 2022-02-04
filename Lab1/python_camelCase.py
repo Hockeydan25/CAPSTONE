@@ -11,16 +11,20 @@ and all of the words are joined together. For example, with the input "fOnt proC
 def camelCase(sentence):
 	""" Convert sentence to camelCase, for example, "Display all books" 
 	is converted to "displayAllBooks" """
+    
 	title_case = sentence.title() # Uppercase first letter of each word
-	upper_camel_cased = title_case.replace(' ', '') # remove spaces 
+	upper_camel_cased = title_case.replace(' ', '') # remove spaces
+    #Optional: implement a filter to remove special characters from the input string. 
 	# Lowercase first letter, join with rest of string 
 	# Slices don't produce index out of bounds errors. 
 	# So this still works on empty strings, strings of length 1
 	return upper_camel_cased[0:1].lower() + upper_camel_cased[1:] 
 
+
+
 def banner():
     """Display program name, using stars."""
-    message = 'Awesome camelcase program!!'
+    message = 'Awesome camelcase program!!'       
     stars= '*' * len(message)
     print(f'\n{stars} \n{message} \n{stars}')
 
@@ -68,6 +72,20 @@ if __name__ == '__main__':
 # for code, name in class_code.items(): # tuple I need help with tuple understaning.
 #     print(f'The class code is {code} and the name is {name}') # f  format string
 
+  # TODO Optional: implement a filter to remove special characters from the input string. 
+#   Write a test for this filter.   
+#     Python program to remove all special characters from string:
 
+#     take string
+#     string = input('Enter any string: ')
+
+#     initializing special characters
+#     special_char = '@_!#$%^&*()<>?/\|}{~:;[]'
+    
+#     using join() + generator to remove special characters
+#     new_string = ''.join(x for x in string if not x in special_char)
+    
+#     print string without special characters
+#     print('New string:', new_string)      
 
 
