@@ -7,30 +7,42 @@ and all of the words are joined together. For example, with the input "fOnt proC
 """made several more changes here for lab3 Branches lesson."""
 
 """Camelcase converter program! have fun, it's useful!"""
+import re
 
-def camelCase(sentence):      
-	title_case = sentence.title() # Uppercase first letter of each word
-	upper_camel_cased = title_case.replace(' ', '') # remove spaces
+def camelCase(sentence):     
+    remove_multiple_spaces = re.sub(r'\s+', ' ', sentence)  # Replace any groups of whitespace with a single space    
+    remove_surrounding_space = remove_multiple_spaces.strip()  # remove any remaining whitespace
+
+    words = remove_surrounding_space.split(' ')
+
+    title_case = sentence.title() # Uppercase first letter of each word
+    
+    
     #Optional: implement a filter to remove special characters from the 
     # input string. 
 	# Lowercase first letter, join with rest of string 
 	# Slices don't produce index out of bounds errors. 
 	# So this still works on empty strings, even strings with length of 1
-	return upper_camel_cased[0:1].lower() + upper_camel_cased[1:], 
+	
+
+def lowercase(word):
+    return word.lower()
+
+def uppercase(word):
+    return word[0:1].lower() + word[1:]
 
 #   TODO Optional: implement a filter to remove special characters 
-# from the input string. 
+#   from the input string. 
 #   Write a test for this filter.   
 #   Python program to remove all special characters from string:
 
-def special_character_remove(new_sentence):
-    string = input('Enter any string: ')
+def special_character_filter(words):
     #initializing special characters
-    special_char = '@_!#$%^&*()<>?/\|}{~:;[]'
+    special_characters = '@_!#$%^&*()<>?/\|}{~:;[]'
     #using join() + generator to remove special characters
-    new_sentence = ''.join(x for x in string if not x in special_char)
+    words = ''.join(x for x in words if not x in special_characters)
     #print string without special characters
-    return new_sentence
+    return words
 
 def banner():
     """Display program name, using stars."""
@@ -45,14 +57,14 @@ def instructions():
 def main():
     banner()
     instructions()
-    sentence = input('Enter your sentence: ')
-    special_character_remove(sentence)
+    sentence = input('Enter your two word pairs: ')
     output = camelCase(sentence)
     print(output)
+
 if __name__ == '__main__':
     main()
 
-#output = '' #empty varible string we can put the new string in for storing. 
+output = '' #empty varible string we can put the new string in for storing. 
 
 #edit = 'fOnt proCESSOR and ParsER' # string we want to edit.
 
@@ -83,20 +95,5 @@ if __name__ == '__main__':
 # for code, name in class_code.items(): # tuple I need help with tuple understaning.
 #     print(f'The class code is {code} and the name is {name}') # f  format string
 
-#   TODO Optional: implement a filter to remove special characters from the input string. 
-#   Write a test for this filter.   
-#     Python program to remove all special characters from string:
-
-#     take string
-#     string = input('Enter any string: ')
-
-#     initializing special characters
-    # special_char = '@_!#$%^&*()<>?/\|}{~:;[]'
-    
-#     using join() + generator to remove special characters
-#     new_string = ''.join(x for x in string if not x in special_char)
-    
-#     print string without special characters
-#     print('New string:', new_string)      
 
 
