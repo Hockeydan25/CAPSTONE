@@ -25,7 +25,7 @@ class TestCamelCase(TestCase):  #class declartion
 
     def test_camelCase_special_characters(self):
         self.assertEqual('@_!#$%^&*()<>?/\|}{~:;[]', python_camelCase.camelCase('@_!#$%^&*()<>?/\|}{~:;[]'))
-        # testing sentence build that matches.    
+        # testing sentence build that matches any special charters.    
 
     ## TODO Optional: implement a filter to remove special characters from the 
     # input string. Write a test for this filter. 
