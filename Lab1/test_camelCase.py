@@ -35,9 +35,8 @@ class TestCamelCase(TestCase):  #class declartion
     def test_camelCase_sentence_with_emojie(self):
 
         input_and_expected_outputs = {
-
-        '👽🌎🌺': '👽🌎🌺',
-        '👽 🌎🌺🐑🌳 🌵🐬': '👽🌎🌺🐑🌳🌵🐬',
+        '👽👽 🌎🌺🐑': '👽👽🌎🌺🐑',
+        #'👽 🌎🌺🐑🌳 🌵🐬': '👽🌎🌺🐑🌳🌵🐬',
 
         }
 
@@ -51,11 +50,12 @@ class TestCamelCase(TestCase):  #class declartion
     def test_camelCase_special_characters(self):
 
         input_and_expected_outputs = {
-        'def@_!#$%^&*()<>?/\|}{~:;[]': 'defEar', 
-        '@_!#$%^&*()<>?/\|}{~:;[]def': 'defEar',
-        '@_!#$%^&*()<>?/\|}{~:;[]Ear': 'defEar',
-        'Ear@_!#$%^&*()<>?/\|}{~:;[]': 'defEar',
+        'def@_!#$%^&*()<>?/\|}{~:;[]ear': 'defEar', 
+        '@_!#$%^&*()<>?/\|}{~:;[]def ear': 'defEar',
+        '@_!#$%^&*()<>?/\|}{~:;[]def ear': 'defEar',
+        'def ear@_!#$%^&*()<>?/\|}{~:;[]': 'defEar',
         }
+
         for input_val, output_val in input_and_expected_outputs.items():
             self.assertEqual(output_val, camel_case.camelcase(input_val))
         # code sample from claraj.
