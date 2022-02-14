@@ -34,20 +34,20 @@ class TestCamelCase(TestCase):  #class declartion
 
     def test_camelCase_sentence_with_emojie(self):
         input_and_expected_outputs = {
-        '👽👽🌎🌺🐑': '👽👽🌎🌺🐑',
-        #'👽 🌎🌺🐑🌳 🌵🐬': '👽🌎🌺🐑🌳🌵🐬',
+        '👽 👽🌎🌺🐑': '👽👽🌎🌺🐑',
+        '👽 🌎🌺🐑🌳 🌵🐬': '👽🌎🌺🐑🌳🌵🐬',
 
         }
 
         for input_val, output_val in input_and_expected_outputs.items():
-            self.assertNotEqual(output_val, camel_case.camelcase(input_val))
+            self.assertEqual(output_val, camel_case.camelcase(input_val))
         #had to fins and copy paste these emojis in, there is another way to place them?
         # code sample from claraj.
 
 
     def test_camelCase_special_characters(self):
         input_and_expected_outputs = {
-        'def@_!#$%^&*()<>?/\|}{~:;[]ear': 'defEar', 
+        'def@_!#$%^&*()<>?/\|}{~:;[] ear': 'defEar', 
         '@_!#$%^&*()<>?/\|}{~:;[]def ear': 'defEar',
         '@_!#$%^&*()<>?/\|}{~:;[]def ear': 'defEar',
         'def ear@_!#$%^&*()<>?/\|}{~:;[]': 'defEar',

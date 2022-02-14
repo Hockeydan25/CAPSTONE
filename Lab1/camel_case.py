@@ -16,7 +16,7 @@ def camelcase(sentence):
     """
     title_case = sentence.title()  # Uppercase first letter of each word
     upper_camel_cased = title_case.replace(' ', '')  # remove spaces 
-    special_character_filter = re.sub('[^a-zA-Z0-9 \n\.]', '', upper_camel_cased)
+    special_character_filter = re.sub(r'[\\@_!#$%^&*()<>?/|}{~:;[\]]', '', upper_camel_cased)
     # Lowercase first letter, join with rest of string 
     # Slices don't produce index out of bounds errors. 
     # So this still works on empty strings, strings of length 1
